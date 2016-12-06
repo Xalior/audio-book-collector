@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PlayerService } from '../player.service';
+import { PlayerService } from '../services/player.service';
 import {MomentModule} from 'angular2-moment';
 
 @Component({

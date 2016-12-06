@@ -13,8 +13,8 @@ import { AppComponent } from './app.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { FooterComponent } from './footer/footer.component';
 
-import { LibraryService } from './library.service'
-import { PlayerService } from './player.service';
+import { LibraryService } from './services/library.service'
+import { PlayerService } from './services/player.service';
 import { BookSummaryComponent } from './book-summary/book-summary.component'
 
 @NgModule({
@@ -29,7 +29,6 @@ import { BookSummaryComponent } from './book-summary/book-summary.component'
     FormsModule,
     HttpModule,
     RouterModule.forRoot([
-//      { path: 'book/:id', component: BookDetailComponent },
       { path: '', component: BookListComponent }
     ]),
     MomentModule,

@@ -1,6 +1,6 @@
 import {Component, OnInit, Input} from '@angular/core';
-import { Book } from '../library.service';
-import { PlayerService } from '../player.service';
+import { Book } from '../models/book';
+import { PlayerService } from '../services/player.service';
 
 @Component({
   selector: 'book-summary',

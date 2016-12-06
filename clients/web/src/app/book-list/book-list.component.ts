@@ -1,7 +1,8 @@
 import { Component, OnInit, OnChanges } from '@angular/core';
 
-import { LibraryService, Book } from '../library.service';
-import { PlayerService } from '../player.service';
+import { LibraryService } from '../services/library.service';
+import { PlayerService } from '../services/player.service';
+import { Book } from '../models/book';
 
 @Component({
   selector: 'book-list',

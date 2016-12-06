@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {} from 'Moment'
 
-import { Book } from './library.service'
+import { Book } from '../models/book'
 
 @Injectable()
 export class PlayerService {
