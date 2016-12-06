@@ -1,0 +1,23 @@
+[{
+  "id": "the_pheonix_project",
+  "title": "The Phoenix Project",
+  "author": "Gene Kim, Kevin Behr, George Spafford. Narrated by Chris Ruen",
+  "chapters": [{
+    "title": "The Phoenix Project",
+    "track": "http://xal.io/abc.d/files/The_Phoenix_Project.mp3"
+  }],
+  "duration": 1024,
+  "cover": "http://xal.io/abc.d/files/The_Phoenix_Project.jpg",
+  "description": "Bill is an IT manager at Parts Unlimited. It's Tuesday morning and on his drive into the office, Bill gets a call from the CEO. \n\nThe company's new IT initiative, code named Phoenix Project, is critical to the future of Parts Unlimited, but the project is massively over budget and very late. The CEO wants Bill to report directly to him and fix the mess in 90 days, or else Bill's entire department will be outsourced.\n\nWith the help of a prospective board member and his mysterious philosophy of The Three Ways, Bill starts to see that IT work has more in common with manufacturing plant work than he ever imagined. With the clock ticking, Bill must organize work flow, streamline interdepartmental communications, and effectively serve the other business functions at Parts Unlimited.\n\nIn a fast-paced and entertaining style, narrator Chris Ruen brings to life a story by three luminaries of the DevOps movement. Listeners will not only learn how to improve their own IT organizations, they'll never view IT the same way again."
+}, {
+  "id": "snow_crash",
+  "title": "Snow Crash",
+  "author": "Neal Stephenson. Narrated by Jonathan Davis",
+  "chapters": [{
+    "title": "Snow Crash",
+    "track": "http://xal.io/abc.d/files/Snow_Crash.mp3"
+  }],
+  "duration": 1024,
+  "cover": "http://xal.io/abc.d/files/Snow_Crash.jpg",
+  "description": "Only once in a great while does a writer come along who defies comparison - a writer so original he redefines the way we look at the world. Neal Stephenson is such a writer and Snow Crash is such a novel, weaving virtual reality, Sumerian myth, and just about everything in between with a cool, hip cybersensibility to bring us the gigathriller of the information age.\n\nIn reality, Hiro Protagonist delivers pizza for Uncle Enzo's CosaNostra Pizza Inc., but in the Metaverse he's a warrior prince. Plunging headlong into the enigma of a new computer virus that's striking down hackers everywhere, he races along the neon-lit streets on a search-and-destroy mission for the shadowy virtual villain threatening to bring about Infocalypse. Snow Crash is a mind-altering romp through a future America so bizarre, so outrageous...you'll recognize it immediately."
+}]

@@ -1,0 +1,29 @@
+.btn-play {
+  -webkit-mask: url(/assets/play.svg) no-repeat 50% 50%;
+  mask: url(/assets/play.svg) no-repeat 50% 50%;
+}
+
+.btn-pause {
+  -webkit-mask: url(/assets/pause.svg) no-repeat 50% 50%;
+  mask: url(/assets/pause.svg) no-repeat 50% 50%;
+}
+
+.btn-backward {
+  -webkit-mask: url(/assets/backward.svg) no-repeat 50% 50%;
+  mask: url(/assets/backward.svg) no-repeat 50% 50%;
+}
+
+.btn-forward {
+  -webkit-mask: url(/assets/forward.svg) no-repeat 50% 50%;
+  mask: url(/assets/forward.svg) no-repeat 50% 50%;
+}
+
+.btn-previous {
+  -webkit-mask: url(/assets/previous.svg) no-repeat 50% 50%;
+  mask: url(/assets/previous.svg) no-repeat 50% 50%;
+}
+
+.btn-next {
+  -webkit-mask: url(/assets/next.svg) no-repeat 50% 50%;
+  mask: url(/assets/next.svg) no-repeat 50% 50%;
+}

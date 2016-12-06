@@ -1,0 +1,27 @@
+@import '../../scss/variables';
+
+div.row {
+  border-bottom: 1px solid $color-dark;
+}
+@media (-webkit-min-device-pixel-ratio: 2) {
+  div.row {
+    border-width: 0.5px;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3) {
+  div.row {
+    border-width: 0.333px;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 4) {
+  div.row {
+    border-width: 0.25px;
+  }
+}
+
+.odd {
+  background-color: $color-selected;
+}
+.even {
+  background-color: $color-light;
+}

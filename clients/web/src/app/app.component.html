@@ -1,0 +1,56 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" [class.footer-expanded]="open" (click)="isCollapsed = !isCollapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">ABC</a>
+    </div>
+    <div class="collapse navbar-collapse"
+         [class.collapse]="!isCollapsed">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-cog visible-xs-inline">&nbsp;</span> Settings</a></li>
+        <li><a href="#" (click)="aboutModal.show(); isCollapsed = !isCollapsed"><span class="glyphicon glyphicon-info-sign visible-xs-inline">&nbsp;</span> About</a></li>
+      </ul>
+      <!--<form class="navbar-form navbar-right">-->
+        <!--<input type="text" class="form-control" placeholder="Search...">-->
+      <!--</form>-->
+    </div>
+  </div>
+</nav>
+
+<div bsModal #aboutModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" (click)="aboutModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Audio Book Collection</h4>
+      </div>
+      <div class="modal-body">
+        <h5>Eh?</h5>
+        <div class="about">
+          An online (only, right now) Angular2 example app. Mostly designed for playing your audiobooks&hellip; By (and
+          for) <a href="http://xalior.com/" target="_blank">Xalior</a>.
+          </div>
+        <h5>Recent Changes</h5>
+        <div class="versions">
+          <h6>v 1.001 - Dam' Droppings</h6>
+          <p>Added the About dropdown menu. Settings too, which does very little right now&hellip; - and a few bug
+          fixes that I missed in Amsterdam.</p>
+        </div>
+        <button type="button" class="btn btn-primary" (click)="aboutModal.hide()" aria-label="Close">
+          <span aria-hidden="true">Close</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
+
+<footer class="footer"></footer>

@@ -1,0 +1,76 @@
+@import '../../scss/variables';
+
+.book-summary {
+  padding: 0;
+  margin: 0;
+  height: $row-height;
+  overflow: hidden;
+
+  button {
+    background: center left no-repeat;
+    background-size: auto;
+    position: relative;
+    margin: 2px;
+    width: $row-height - 4px;
+    height: $row-height - 4px;
+
+    img {
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    span {
+      top: 10%;
+      left: 10%;
+      position: absolute;
+      width: 80%;
+      height: 80%;
+      background-color: $color-ghost;
+      opacity: 0.75;
+    }
+    &.btn-play span {
+      background-image: url(/assets/play.svg);
+    }
+  }
+  .btn-playpause {
+    float: left;
+  }
+
+  div.top-detail {
+    display: table-cell;
+    vertical-align: middle;
+    height: $row-height;
+    font-size: $row-height / 5;
+    margin: auto 0;
+    span.author {
+      color: $color-active;
+      span {
+        color: $color-ghost;
+      }
+    }
+  }
+
+  div.more-detail {
+    float: right;
+    height: $row-height;
+    padding: ($row-height / 3) 5px;
+    width: ($row-height / 3) + 10px;
+    .btn-information {
+      padding: 0;
+      margin: 0;
+      font-size: 10px;
+      width: $row-height / 3;
+      height: $row-height / 3;
+      background-image: url(/assets/information.svg);
+    }
+  }
+
+  .truncate-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

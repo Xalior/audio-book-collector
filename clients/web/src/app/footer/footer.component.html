@@ -1,0 +1,28 @@
+<!-- This footer should hidden by default and shown when there are books -->
+<div class="footer navbar-inverse" [class.footer-expanded]="open">
+  <div class="container-cover">
+    <button class="cover" class="btn btn-media" (click)="togglePlayerMode()">
+      <img src="{{playerService.book.cover}}">
+    </button>
+  </div>
+  <div class="container-fluid controls-playback">
+    <div class="row controls">
+      <div class="col-xs-4">
+        <button (click)="playerService.back()" class="btn btn-media btn-backward"></button>
+        <span>{{ playerService.seekBackStep}}</span>
+      </div>
+      <div class="col-xs-4">
+        <button (click)="playPause()" class="btn btn-media btn-playpause btn-play" [class.btn-pause]="playerService.playing"></button>
+      </div>
+      <div class="col-xs-4">
+        <button (click)="forward()" class="btn btn-media btn-forward"></button>
+        <span>{{ playerService.seekForwardStep}}</span>
+      </div>
+    </div>
+    <div class="row progress-play">
+      <div class="progress-indicator" [ngStyle]="{'width': ((playerService.currentTime / playerService.duration) * 100)+'%'}">
+        <span>{{ playerService.currentTimeReadable }}</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<!-- Begin page content -->
+<div class="container container-fluid">
+  <div *ngFor="let book of books; let index=index; let odd=odd; let even=even;"
+       class="row" [ngClass]="{ odd: odd, even: even }">
+
+      <book-summary [book]="book" [ngClass]="{completed: book.isDone}">
+      </book-summary>
+  </div>
+</div>

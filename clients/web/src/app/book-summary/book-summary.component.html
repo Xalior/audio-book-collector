@@ -1,0 +1,16 @@
+<div class="book-summary">
+  <button (click)="quickPlay()" class="btn btn-playpause">
+    <img src="{{book.cover}}" class="img-summary cover">
+    <span class="btn-play">&nbsp;</span>
+  </button>
+
+  <div class="more-detail">
+    <button (click)="quickPlay()" class="btn btn-information">
+    </button>
+  </div>
+
+  <div class="top-detail">
+    {{book.title}}
+    <span class="author"><span>By</span> {{book.author}}</span>
+  </div>
+</div>
