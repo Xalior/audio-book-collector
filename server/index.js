@@ -1,0 +1,5 @@
+"use strict";
+const abcD_1 = require('./abcD');
+new abcD_1.abcD();
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQSx1QkFBcUIsUUFFckIsQ0FBQyxDQUY0QjtBQUU3QixJQUFJLFdBQUksRUFBRSxDQUFDIiwiZmlsZSI6ImluZGV4LmpzIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgYWJjRCB9IGZyb20gJy4vYWJjRCdcblxubmV3IGFiY0QoKTtcbiJdfQ==
