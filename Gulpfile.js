@@ -10,7 +10,7 @@ var tsSource = [
   '!server/typings/browser.d.ts'
 ];
 
-gulp.task('build:server', function () {
+gulp.task('server:build', function () {
   var tsProject = ts.createProject(path.resolve('./server/tsconfig.json'));
   var tsResult = gulp.src(tsSource)
     .pipe(sourcemaps.init())
@@ -20,24 +20,24 @@ gulp.task('build:server', function () {
     .pipe(gulp.dest(path.resolve('./server')))
 });
 
-gulp.task('build',['build:server']);
+gulp.task('build',['server:build']);
 
-gulp.task('watch', function(){
-  gulp.watch(['server/', '!server/**/*.ts'], ['build:server']);
+gulp.task('server:watch', function(){
+  gulp.watch(['server/', '!server/**/*.ts'], ['server:build']);
 });
 
-gulp.task('dev', ['build:server'], function(){
+gulp.task('server:dev', ['server:build'], function(){
   return nodemon({
     script: './server/index.js',
     env: { 'NODE_ENV': 'development' },
     ext: "ts",
     watch: "server",
     ignore: ['server/*.js','server/**/*.js'],
-    tasks: ['build:server']
+    tasks: ['server:build']
   }).on('restart', () => {
     console.log('App restarted!')
   });
 });
 
-gulp.task('default', ['dev']);
+gulp.task('default', ['server:dev']);
 
