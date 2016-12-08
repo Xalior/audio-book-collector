@@ -9,7 +9,7 @@ import { MomentModule } from 'angular2-moment';
 import { ModalModule } from 'ng2-bootstrap/ng2-bootstrap'
 
 import { StoreModule } from '@ngrx/store';
-import { BookReducer} from './models';
+import { BookReducer, UserReducer } from './models';
 
 import { AppComponent } from './app.component';
 
@@ -36,7 +36,8 @@ import { BookSummaryComponent } from './book-summary/book-summary.component'
       { path: '', component: BookListComponent }
     ]),
     StoreModule.provideStore({
-      books: BookReducer
+      books: BookReducer,
+      user: UserReducer
     }),
     MomentModule,
     ModalModule
