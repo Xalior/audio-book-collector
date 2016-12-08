@@ -8,6 +8,9 @@ import { MomentModule } from 'angular2-moment';
 
 import { ModalModule } from 'ng2-bootstrap/ng2-bootstrap'
 
+import { StoreModule } from '@ngrx/store';
+import { BookReducer} from './models';
+
 import { AppComponent } from './app.component';
 
 import { BookListComponent } from './book-list/book-list.component';
@@ -15,6 +18,7 @@ import { FooterComponent } from './footer/footer.component';
 
 import { LibraryService } from './services/library.service'
 import { PlayerService } from './services/player.service';
+import { UserService } from './services/user.service';
 import { BookSummaryComponent } from './book-summary/book-summary.component'
 
 @NgModule({
@@ -31,10 +35,13 @@ import { BookSummaryComponent } from './book-summary/book-summary.component'
     RouterModule.forRoot([
       { path: '', component: BookListComponent }
     ]),
+    StoreModule.provideStore({
+      books: BookReducer
+    }),
     MomentModule,
     ModalModule
   ],
-  providers: [LibraryService, PlayerService],
+  providers: [LibraryService, PlayerService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

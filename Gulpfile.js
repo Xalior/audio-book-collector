@@ -39,5 +39,7 @@ gulp.task('server:dev', ['server:build'], function(){
   });
 });
 
-gulp.task('default', ['server:dev']);
+gulp.task('dev', ['server:dev']);
+
+gulp.task('default', ['dev']);
 
