@@ -9,7 +9,8 @@ const API_PATH: string = 'user';
 
 @Injectable()
 export class UserService {
-  public books: Observable<User>;
+  private API_URL: string;
+  public user: Observable<User>;
 
 
   constructor(private http: Http, private store: Store<ABCStore>) {
@@ -21,7 +22,7 @@ export class UserService {
   checkUser() {
     this.http.get(this.API_URL)
       .map(res => res.json())
-      .map(payload => ({ type: 'ADD_BOOKS', payload }))
+      .map(payload => ({ type: 'SET_USER', payload }))
       .subscribe(action => this.store.dispatch(action));
 
   }
