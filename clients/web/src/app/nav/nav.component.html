@@ -1,0 +1,96 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" [class.footer-expanded]="open" (click)="isCollapsed = !isCollapsed">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">ABC</a>
+    </div>
+    <div class="collapse navbar-collapse"
+         [class.collapse]="!isCollapsed">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-cog visible-xs-inline">&nbsp;</span> Settings</a></li>
+        <li><a href="#" (click)="aboutModal.show(); isCollapsed = !isCollapsed">
+          <span class="glyphicon glyphicon-info-sign visible-xs-inline">&nbsp;</span> About</a></li>
+        <li dropdown
+            [autoClose]="'nonInput'">
+          <a href="#" dropdownToggle>Login</a>
+          <ul dropdownMenu  id="login-dp" class="dropdown-menu">
+            <li>
+              <div class="row">
+                <div class="col-md-12">
+                  <!--Login via-->
+                  <!--<div class="social-buttons">-->
+                  <!--<a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>-->
+                  <!--<a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>-->
+                  <!--</div>-->
+                  <!--or-->
+                  <form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+                    <div class="form-group">
+                      <label class="sr-only" for="username">Username</label>
+                      <input type="email" class="form-control" id="username" placeholder="Username" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="sr-only" for="password">Password</label>
+                      <input type="password" class="form-control" id="password" placeholder="Password" required>
+                      <!--<div class="help-block text-right"><a href="">Forget the password ?</a></div>-->
+                    </div>
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> keep me logged-in
+                      </label>
+                    </div>
+                  </form>
+                </div>
+                <!--<div class="bottom text-center">-->
+                <!--New here ? <a href="#"><b>Join Us</b></a>-->
+                <!--</div>-->
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <!--<form class="navbar-form navbar-right">-->
+      <!--<input type="text" class="form-control" placeholder="Search...">-->
+      <!--</form>-->
+    </div>
+  </div>
+</div>
+
+<!-- Modal Dialogs -->
+
+<div bsModal #aboutModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" (click)="aboutModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Audio Book Collection</h4>
+      </div>
+      <div class="modal-body">
+        <h5><strong>Eh?</strong></h5>
+        <div class="about">
+          An online (only, right now) Angular2 example app to speak to an experimental series of TypeScript microservices.
+          Mostly designed for playing your audiobooks&hellip; By designed by (and built for) <a href="http://xalior.com/"
+                                                                                                target="_blank">Xalior</a>.
+        </div>
+        <h5><strong>Finer Details</strong></h5>
+        <div class="more">
+          <strong>I am open source!</strong>
+          <p>So, therefore, everything you could want to know about this application, and were too stupid to ask can be
+           found at  <a href="http://github.com/xalior/audio-book-collector" target="_blank">GitHub</a>.
+        </div>
+        <button type="button" class="btn btn-primary" (click)="aboutModal.hide()" aria-label="Close">
+          <span aria-hidden="true">Close</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
