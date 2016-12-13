@@ -24,30 +24,31 @@ export class abcD {
 
     // DecorateUser (on req)
     this._App.use(async function (req, res, next) {
+
       const cookie = req.cookies.abc_id;
 
-      const [user, key] = cookie.split(":");
+      if(cookie) {
+        const [user, key] = cookie.split(":");
+        // get our user...
+        var connection = getConnectionManager().get();
+        let userRepo = connection.getRepository(User);
+        let thisUser = await userRepo.createQueryBuilder("users")
+            .where("username=:userName")
+            .innerJoinAndSelect('session', 'session', 'ON', 'session.key=:sessionKey', {
+              sessionKey: key
+            })
+            .setParameters({
+              userName: user,
+              sessionKey: key
+            })
+            .setMaxResults(1)
+            .getResults();
 
-      // get our user...
-      var connection = getConnectionManager().get();
-      let userRepo = connection.getRepository(User);
-      let thisUser = await userRepo.createQueryBuilder("users")
-        .where("username=:userName")
-        .innerJoinAndSelect('session', 'session', 'ON', 'session.key=:sessionKey', {
-          sessionKey: key
-        })
-        .setParameters({
-          userName: user,
-          sessionKey: key
-        })
-        .setMaxResults(1)
-        .getResults();
+        console.log('DecorateUser found ', thisUser);
 
-      console.log('DecorateUser found ', thisUser);
+        (<any>req)['user'] = thisUser[0];
+      }
 
-      (<any>req)['user'] = thisUser[0];
-
-      console.log(req.protocol + '://' + req.get('host') + '/');
       next();
     });
 
